@@ -1,0 +1,19 @@
+{
+    "monitors": [
+        {
+            "username": "Luiz",
+            "password": "28012006",
+            "name": "Luiz Silva"
+        },
+        {
+            "username": "Jota",
+            "password": "2024",
+            "name": "Jota Pereira"
+        },
+        {
+            "username": "Manoel",
+            "password": "2025",
+            "name": "Manoel Santos"
+        }
+    ]
+}
