@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEDUC - Lista de Alunos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SEDUC - Lista de Alunos</h1>
+        <nav>
+            <a href="main.html">Horários</a>
+            <a href="absences.html">Faltas</a>
+            <a href="students.html">Alunos</a>
+            <a href="reports.html">Relatórios (PDF)</a>
+        </nav>
+        <h2>Alunos por Série</h2>
+        <table id="student-table">
+            <thead>
+                <tr>
+                    <th>Nome do Aluno</th>
+                    <th>Série</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <footer>
+        <p>&copy; 2025 Luiz Felipe. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        if (localStorage.getItem('loggedIn') !== 'true') {
+            console.log('Usuário não logado, redirecionando para index.html');
+            window.location.href = 'index.html';
+        }
+    </script>
+    <script defer src="js/students.js"></script>
+</body>
+</html>
