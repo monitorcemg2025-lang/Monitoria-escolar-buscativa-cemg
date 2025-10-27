@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEDUC - Registro de Horários</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SEDUC - Registro de Horários do Monitor</h1>
+        <nav>
+            <a href="main.html">Horários</a>
+            <a href="absences.html">Faltas</a>
+            <a href="students.html">Alunos</a>
+            <a href="reports.html">Relatórios (PDF)</a>
+        </nav>
+        <form id="schedule-form">
+            <label for="monitor-name">Nome Completo do Monitor:</label>
+            <input type="text" id="monitor-name" required placeholder="Ex: Luiz Silva">
+            <label for="date">Data:</label>
+            <input type="date" id="date" required>
+            <label for="entry-time">Horário de Entrada:</label>
+            <input type="time" id="entry-time" required>
+            <label for="exit-time">Horário de Saída:</label>
+            <input type="time" id="exit-time" required>
+            <button type="submit">Registrar</button>
+        </form>
+        <h2>Horários Registrados</h2>
+        <table id="schedule-table">
+            <thead>
+                <tr>
+                    <th>Nome do Monitor</th>
+                    <th>Data</th>
+                    <th>Entrada</th>
+                    <th>Saída</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <footer>
+        <p>&copy; 2025 Luiz Felipe. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        if (localStorage.getItem('loggedIn') !== 'true') {
+            console.log('Usuário não logado, redirecionando para index.html');
+            window.location.href = 'index.html';
+        }
+    </script>
+    <script defer src="js/schedules.js"></script>
+</body>
+      </html>
